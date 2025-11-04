@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "TimKiem";
+}
+@model List<LTWeb_TH9_Bai1_Bai2.Models.Sach>
+
+
+
+<h1 style="text-align:center;">TÌM KIẾM SẢN PHẨM</h1>
+<form action="/Home/TimKiem" method="post">
+    <div style="max-width:390px; margin:auto;">
+        <p><strong>Tên sản phẩm:</strong></p>
+        <input type="text" name="keyword" class="form-control" placeholder="Nhập từ khóa..." />
+        <br />
+
+        <p><strong>Chủ đề:</strong></p>
+        @Html.DropDownList("MaChuDe", (SelectList)ViewBag.MaChuDe, "-- Chọn chủ đề --", new { @class = "form-control" }
+        )
+        <br />
+
+        <p><strong>Giá:</strong></p>
+        <div>
+            <label><input type="checkbox" name="Gia" value="1" /> 0 - 10,000 VNĐ</label><br />
+            <label><input type="checkbox" name="Gia" value="2" /> 12,000 - 20,000 VNĐ</label><br />
+            <label><input type="checkbox" name="Gia" value="3" /> 21,000 - 40,000 VNĐ</label><br />
+            <label><input type="checkbox" name="Gia" value="4" /> Lớn hơn 40,000 VNĐ</label>
+        </div>
+        <br />
+
+        <input type="submit" value="Search" class="btn btn-primary" style="width:100%;" />
+    </div>
+</form>
+
+
+@if (Model != null && Model.Any())
+{
+    <hr />
+    <h2 style="text-align:center;">Kết quả tìm kiếm</h2>
+
+    <div class="container" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+        @foreach (var s in Model)
+        {
+            <div class="card" style="width:200px; cursor:pointer;"
+                 onclick="location.href='@Url.Action("XemChiTiet", "Home", new { id = s.MaSach })'">
+                <img src="@Url.Content("~/Content/Images/" + s.AnhBia)" style="width:200px; height:250px;" />
+                <div class="card-content">
+                    <h5 style="font-size:16px; text-align:center;">@s.TenSach</h5>
+                    <p style="text-align:center;">@String.Format("{0:0,0}", s.GiaBan) VNĐ</p>
+                </div>
+            </div>
+        }
+    </div>
+}
+else if (Model != null)
+{
+    <p style="margin: auto; color: red; max-width: 390px; ">Không tìm thấy sản phẩm phù hợp.</p>
+}
+

@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "DangKy";
+}
+@model LTWeb_TH9_Bai1_Bai2.Models.KhachHang
+
+<h1 style="text-align:center; margin-bottom:20px;">ĐĂNG KÝ TÀI KHOẢN</h1>
+
+<div class="container" style="max-width:300px; margin:auto;">
+    <form action="/KhachHang/DangKy" method="post">
+        <div class="form-group mb-3">
+            <label><strong>Họ tên:</strong></label>
+            <input type="text" name="HoTen" class="form-control" placeholder="Nhập họ tên..." required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label><strong>Tên đăng nhập:</strong></label>
+            <input type="text" name="TaiKhoan" class="form-control" placeholder="Nhập tên đăng nhập..." required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label><strong>Mật khẩu:</strong></label>
+            <input type="password" name="MatKhau" class="form-control" placeholder="Nhập mật khẩu..." required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label><strong>Mật khẩu nhập lại:</strong></label>
+            <input type="password" name="NhapLaiMatKhau" class="form-control" placeholder="Nhập lại mật khẩu..." required />
+        </div>
+
+        @if (ViewBag.ThongBao != null)
+        {
+            <div class="alert alert-danger mt-3">@ViewBag.ThongBao</div>
+        }
+
+        <div class="form-group mb-3">
+            <label><strong>Email:</strong></label>
+            <input type="email" name="Email" class="form-control" placeholder="Nhập email..." />
+        </div>
+
+        <div class="form-group mb-3">
+            <label><strong>Địa chỉ:</strong></label>
+            <input type="text" name="DiaChi" class="form-control" placeholder="Nhập địa chỉ..." />
+        </div>
+
+        <div class="form-group mb-3">
+            <label><strong>Số điện thoại:</strong></label>
+            <input type="text" name="DienThoai" class="form-control" placeholder="Nhập số điện thoại..." />
+        </div>
+
+        <div class="text-center">
+            <input type="submit" value="Đăng ký" class="btn btn-success" style="width:100%;" />
+        </div>
+    </form>
+</div>
+

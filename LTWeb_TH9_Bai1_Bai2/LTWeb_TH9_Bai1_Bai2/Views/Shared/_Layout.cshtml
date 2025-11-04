@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <script src="~/Content/js/script.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Fahasa.com</div>
+                <nav>
+                    <ul>
+                        <li>@Html.ActionLink("Trang Chủ", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Liên Hệ", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Tìm Kiếm", "TimKiem", "Home")</li>
+                        @if (Session["TaiKhoan"] == null)
+                        {
+                            <li>@Html.ActionLink("Đăng Nhập", "DangNhap", "KhachHang", null, new { @class = "btn btn-primary"})</li>
+                            <li>@Html.ActionLink("Đăng Ký", "DangKy", "KhachHang", null, new { @class = "btn btn-primary" })</li>
+                        }
+                        else
+                        {
+                            <li><span>Xin chào, @Session["HoTen"]!</span></li>
+                            <li>@Html.ActionLink("Đăng Xuất", "DangXuat", "KhachHang", null, new { @class = "btn btn-primary" })</li>
+                        }
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <br />
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <h1 class="bg-success large" style="padding-left: 10px;"> CHỦ ĐỀ SÁCH</h1>
+                @Html.Action("DSMenu_ChuDe", "Home")
+                <br />
+
+                <h1 class="bg-success large" style="padding-left: 10px;"> NHÀ XUẤT BẢN</h1>
+                @Html.Action("DSMenu_NXB", "Home")
+            </div>
+            <div class="col-md-9">
+                <div>
+                    <img src="~/Content/Images/Anh0.jpg" class="w-100" style="height: 300px;"/>
+                </div>
+                <div>
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <footer>
+        <div style="text-align: center; ">
+            <h5>Liện hệ Khoa Công nghệ Thông tin - Trường Đại học Công Thương Tp.HCM link fanpage and link youtube</h5>
+            <h5>Địa chỉ: 140 Lê Trọng Tấn, Phường Tây Hạnh, Quận Tân Phú, Tp.HCM - ĐT: (028)38161673 ext(136) - Mail: kcntt@huit.edu.vn</h5>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

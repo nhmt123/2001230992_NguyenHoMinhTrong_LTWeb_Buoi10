@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "XemChiTiet";
+}
+@model LTWeb_TH9_Bai1_Bai2.Models.Sach
+
+<h1>CHI TIẾT SẢN PHẨM</h1>
+
+<div class="row">
+    <div class="col-3">
+        <img src="@Url.Content("~/Content/Images/" + Model.AnhBia)" width="250px;" height="auto" />
+    </div>
+    <div class="col-9">
+        <p>Tên sách: @Model.TenSach</p>
+        <p>Mô tả: @Model.MoTa</p>
+        <p>Giá bán: @String.Format("{0:0,0}", Model.GiaBan) VNĐ</p>
+        <p>Các tác giả:</p>
+        <ul>
+            @foreach (var tg in Model.ThamGias)
+            {
+                <li>@tg.TacGia.TenTacGia - @tg.VaiTro</li>
+            }
+        </ul>
+        <p>
+            <input type="submit" value="Đặt mua" />
+        </p>
+    </div>
+</div>
+
+<h1 style="text-align: left">Các sản phẩm cùng chủ để</h1>
+<div class="row">
+    <div class="card-container">
+        @foreach (var s in Model.ChuDe.Saches.Where(s => s.MaSach != Model.MaSach))
+        {
+            <div class="card" style="width: 220px">
+                <div>
+                    <img style="width: 220px; height: 270px;" src="~/Content/Images/@s.AnhBia" />
+                    <br /><br />
+                    <h5 style="font-size:20px; text-align: center;">@s.TenSach</h5>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<h1 style="text-align:left">Các sản phẩm cùng nhà xuất bản</h1>
+<div>
+    <div class="card-container">
+        @foreach (var s in Model.NhaXuatBan.Saches.Where(s => s.MaSach != Model.MaSach))
+        {
+            <div class="card" style="width: 220px">
+                <div>
+                    <img style="width: 220px; height: 270px;" src="~/Content/Images/@s.AnhBia" />
+                    <br /><br />
+                    <h5 style="font-size:20px; text-align: center;">@s.TenSach</h5>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+

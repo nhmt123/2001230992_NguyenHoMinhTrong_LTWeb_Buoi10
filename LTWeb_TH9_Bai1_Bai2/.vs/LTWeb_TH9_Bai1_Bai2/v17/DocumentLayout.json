@@ -1,0 +1,181 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\ltweb_th9_bai1_bai2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|solutionrelative:ltweb_th9_bai1_bai2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|c:\\visual studio 2022 project\\projects\\ltweb09\\ltweb_th9_bai1_bai2\\ltweb_th9_bai1_bai2\\controllers\\khachhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|solutionrelative:ltweb_th9_bai1_bai2\\controllers\\khachhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\ltweb_th9_bai1_bai2\\views\\khachhang\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|solutionrelative:ltweb_th9_bai1_bai2\\views\\khachhang\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\ltweb_th9_bai1_bai2\\views\\khachhang\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|solutionrelative:ltweb_th9_bai1_bai2\\views\\khachhang\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\ltweb_th9_bai1_bai2\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|solutionrelative:ltweb_th9_bai1_bai2\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\ltweb_th9_bai1_bai2\\views\\home\\htsachtheonxb.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|solutionrelative:ltweb_th9_bai1_bai2\\views\\home\\htsachtheonxb.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\ltweb_th9_bai1_bai2\\views\\home\\htsachtheochude.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|solutionrelative:ltweb_th9_bai1_bai2\\views\\home\\htsachtheochude.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\ltweb_th9_bai1_bai2\\models\\ql_sach.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|solutionrelative:ltweb_th9_bai1_bai2\\models\\ql_sach.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\ltweb_th9_bai1_bai2\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|solutionrelative:ltweb_th9_bai1_bai2\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\ltweb_th9_bai1_bai2\\views\\home\\xemchitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B37A11E0-03AF-40EA-8AF0-B5D6194B376F}|LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2.csproj|solutionrelative:ltweb_th9_bai1_bai2\\views\\home\\xemchitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DangNhap.cshtml",
+              "DocumentMoniker": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Views\\KhachHang\\DangNhap.cshtml",
+              "RelativeDocumentMoniker": "LTWeb_TH9_Bai1_Bai2\\Views\\KhachHang\\DangNhap.cshtml",
+              "ToolTip": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Views\\KhachHang\\DangNhap.cshtml",
+              "RelativeToolTip": "LTWeb_TH9_Bai1_Bai2\\Views\\KhachHang\\DangNhap.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-04T17:54:19.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DangKy.cshtml",
+              "DocumentMoniker": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Views\\KhachHang\\DangKy.cshtml",
+              "RelativeDocumentMoniker": "LTWeb_TH9_Bai1_Bai2\\Views\\KhachHang\\DangKy.cshtml",
+              "ToolTip": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Views\\KhachHang\\DangKy.cshtml",
+              "RelativeToolTip": "LTWeb_TH9_Bai1_Bai2\\Views\\KhachHang\\DangKy.cshtml",
+              "ViewState": "AgIAABQAAAAAAAAAAAAswDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-04T17:30:52.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "KhachHangController.cs",
+              "DocumentMoniker": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Controllers\\KhachHangController.cs",
+              "RelativeDocumentMoniker": "LTWeb_TH9_Bai1_Bai2\\Controllers\\KhachHangController.cs",
+              "ToolTip": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Controllers\\KhachHangController.cs",
+              "RelativeToolTip": "LTWeb_TH9_Bai1_Bai2\\Controllers\\KhachHangController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAADwvzIAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T17:21:40.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "LTWeb_TH9_Bai1_Bai2\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "LTWeb_TH9_Bai1_Bai2\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAswDMAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-04T16:25:03.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "XemChiTiet.cshtml",
+              "DocumentMoniker": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Views\\Home\\XemChiTiet.cshtml",
+              "RelativeDocumentMoniker": "LTWeb_TH9_Bai1_Bai2\\Views\\Home\\XemChiTiet.cshtml",
+              "ToolTip": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Views\\Home\\XemChiTiet.cshtml",
+              "RelativeToolTip": "LTWeb_TH9_Bai1_Bai2\\Views\\Home\\XemChiTiet.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-04T14:41:15.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "LTWeb_TH9_Bai1_Bai2\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "LTWeb_TH9_Bai1_Bai2\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-04T14:35:45.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "LTWeb_TH9_Bai1_Bai2\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "LTWeb_TH9_Bai1_Bai2\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAqwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T14:32:58.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HTSachTheoChuDe.cshtml",
+              "DocumentMoniker": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Views\\Home\\HTSachTheoChuDe.cshtml",
+              "RelativeDocumentMoniker": "LTWeb_TH9_Bai1_Bai2\\Views\\Home\\HTSachTheoChuDe.cshtml",
+              "ToolTip": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Views\\Home\\HTSachTheoChuDe.cshtml",
+              "RelativeToolTip": "LTWeb_TH9_Bai1_Bai2\\Views\\Home\\HTSachTheoChuDe.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-04T16:28:18.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HTSachTheoNXB.cshtml",
+              "DocumentMoniker": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Views\\Home\\HTSachTheoNXB.cshtml",
+              "RelativeDocumentMoniker": "LTWeb_TH9_Bai1_Bai2\\Views\\Home\\HTSachTheoNXB.cshtml",
+              "ToolTip": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Views\\Home\\HTSachTheoNXB.cshtml",
+              "RelativeToolTip": "LTWeb_TH9_Bai1_Bai2\\Views\\Home\\HTSachTheoNXB.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-04T16:39:24.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "QL_Sach.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Models\\QL_Sach.edmx",
+              "RelativeDocumentMoniker": "LTWeb_TH9_Bai1_Bai2\\Models\\QL_Sach.edmx",
+              "ToolTip": "C:\\Visual Studio 2022 Project\\Projects\\LTWeb09\\LTWeb_TH9_Bai1_Bai2\\LTWeb_TH9_Bai1_Bai2\\Models\\QL_Sach.edmx [Diagram1]",
+              "RelativeToolTip": "LTWeb_TH9_Bai1_Bai2\\Models\\QL_Sach.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-11-04T14:33:55.903Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
