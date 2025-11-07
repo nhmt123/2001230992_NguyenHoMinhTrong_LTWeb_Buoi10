@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@model List<LTWeb_TH10.Models.SanPham>
+
+<h1>Danh Sách Sản Phẩm</h1>
+
+<div class="container">
+    <div class="card-container">
+        @foreach (var s in Model)
+        {
+            <div class="card" style="width:300px; height: 450px; ">
+                <div>
+                    <img style="width:300px; height: 300px; " src="~/Content/Images/@s.HinhAnh" />
+                </div>
+                <div class="card-content">
+                    <h5 style="text-align: center;">@s.TenSP</h5>
+                    <h5 style="text-align: center;">@String.Format("{0:0,0}", s.DonGia) VNĐ</h5>
+                    <center>
+                        @Html.ActionLink("CHỌN MUA", "ThemMatHang", "DatHang", new { msp = s.MaSanPham }, new { @class = "btn btn-primary" })
+                    </center>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+

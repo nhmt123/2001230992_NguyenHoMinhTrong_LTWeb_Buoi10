@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "DangNhap";
+}
+
+<div class="container mt-5" style="max-width:300px;">
+    <h2 class="text-center mb-4">Đăng Nhập</h2>
+    <form action="/Home/DangNhap" method="post">
+        <div class="form-group mb-3">
+            <label><strong>Tên đăng nhập:</strong></label>
+            <input type="text" name="TaiKhoan" placeholder="Nhập tên đăng nhập..." />
+        </div>
+
+        <div class="form-group mb-3">
+            <label><strong>Mật khẩu:</strong></label>
+            <input type="password" name="MatKhau" class="form-control" required placeholder="Nhập mật khẩu..." />
+        </div>
+        <div class="text-center">
+            <input type="submit" value="Đăng nhập" class="btn btn-primary" style="width:100%;" />
+        </div>
+    </form>
+</div>
+

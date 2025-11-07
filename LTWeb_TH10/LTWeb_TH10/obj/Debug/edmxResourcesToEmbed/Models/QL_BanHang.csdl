@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QL_BanHangModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ChiTiet">
+    <Key>
+      <PropertyRef Name="MaHD" />
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaHD" Type="Int32" Nullable="false" />
+    <Property Name="MaSP" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <NavigationProperty Name="HoaDon" Relationship="Self.fk_ct_hd" FromRole="ChiTiet" ToRole="HoaDon" />
+    <NavigationProperty Name="SanPham" Relationship="Self.fk_ct_sp" FromRole="ChiTiet" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="HoaDon">
+    <Key>
+      <PropertyRef Name="MaHoaDon" />
+    </Key>
+    <Property Name="MaHoaDon" Type="Int32" Nullable="false" />
+    <Property Name="NgayHoaDon" Type="DateTime" Precision="0" />
+    <Property Name="MaKH" Type="Int32" />
+    <NavigationProperty Name="ChiTiets" Relationship="Self.fk_ct_hd" FromRole="HoaDon" ToRole="ChiTiet" />
+    <NavigationProperty Name="KhachHang" Relationship="Self.fk_hd_kh" FromRole="HoaDon" ToRole="KhachHang" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="MaKhachHang" />
+    </Key>
+    <Property Name="MaKhachHang" Type="Int32" Nullable="false" />
+    <Property Name="TenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TaiKhoan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SoDienThoai" Type="Int32" />
+    <NavigationProperty Name="HoaDons" Relationship="Self.fk_hd_kh" FromRole="KhachHang" ToRole="HoaDon" />
+    <NavigationProperty Name="DonDatHangs" Relationship="QL_BanHangModel.fk_ddh_kh" FromRole="KhachHang" ToRole="DonDatHang" />
+  </EntityType>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="MaSanPham" />
+    </Key>
+    <Property Name="MaSanPham" Type="Int32" Nullable="false" />
+    <Property Name="TenSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="HinhAnh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SoLuongTon" Type="Int32" />
+    <NavigationProperty Name="ChiTiets" Relationship="Self.fk_ct_sp" FromRole="SanPham" ToRole="ChiTiet" />
+    <NavigationProperty Name="ChiTietDonDatHangs" Relationship="QL_BanHangModel.fk_ctddh_sp" FromRole="SanPham" ToRole="ChiTietDonDatHang" />
+  </EntityType>
+  <Association Name="fk_ct_hd">
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
+    <End Role="ChiTiet" Type="Self.ChiTiet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoaDon">
+        <PropertyRef Name="MaHoaDon" />
+      </Principal>
+      <Dependent Role="ChiTiet">
+        <PropertyRef Name="MaHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ct_sp">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="ChiTiet" Type="Self.ChiTiet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="ChiTiet">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_hd_kh">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="MaKhachHang" />
+      </Principal>
+      <Dependent Role="HoaDon">
+        <PropertyRef Name="MaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QL_BanHangEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ChiTiets" EntityType="Self.ChiTiet" />
+    <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
+    <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />
+    <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
+    <AssociationSet Name="fk_ct_hd" Association="Self.fk_ct_hd">
+      <End Role="HoaDon" EntitySet="HoaDons" />
+      <End Role="ChiTiet" EntitySet="ChiTiets" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ct_sp" Association="Self.fk_ct_sp">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="ChiTiet" EntitySet="ChiTiets" />
+    </AssociationSet>
+    <AssociationSet Name="fk_hd_kh" Association="Self.fk_hd_kh">
+      <End Role="KhachHang" EntitySet="KhachHangs" />
+      <End Role="HoaDon" EntitySet="HoaDons" />
+    </AssociationSet>
+    <EntitySet Name="ChiTietDonDatHangs" EntityType="QL_BanHangModel.ChiTietDonDatHang" />
+    <EntitySet Name="DonDatHangs" EntityType="QL_BanHangModel.DonDatHang" />
+    <AssociationSet Name="fk_ctddh_ddh" Association="QL_BanHangModel.fk_ctddh_ddh">
+      <End Role="DonDatHang" EntitySet="DonDatHangs" />
+      <End Role="ChiTietDonDatHang" EntitySet="ChiTietDonDatHangs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ctddh_sp" Association="QL_BanHangModel.fk_ctddh_sp">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="ChiTietDonDatHang" EntitySet="ChiTietDonDatHangs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ddh_kh" Association="QL_BanHangModel.fk_ddh_kh">
+      <End Role="KhachHang" EntitySet="KhachHangs" />
+      <End Role="DonDatHang" EntitySet="DonDatHangs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ChiTietDonDatHang">
+    <Key>
+      <PropertyRef Name="MaDonHang" />
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaDonHang" Type="Int32" Nullable="false" />
+    <Property Name="MaSP" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="DonDatHang" Relationship="QL_BanHangModel.fk_ctddh_ddh" FromRole="ChiTietDonDatHang" ToRole="DonDatHang" />
+    <NavigationProperty Name="SanPham" Relationship="QL_BanHangModel.fk_ctddh_sp" FromRole="ChiTietDonDatHang" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="DonDatHang">
+    <Key>
+      <PropertyRef Name="MaDonHang" />
+    </Key>
+    <Property Name="MaDonHang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaKH" Type="Int32" />
+    <Property Name="NgayDat" Type="DateTime" Precision="0" />
+    <Property Name="NgayGiao" Type="DateTime" Precision="0" />
+    <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ChiTietDonDatHangs" Relationship="QL_BanHangModel.fk_ctddh_ddh" FromRole="DonDatHang" ToRole="ChiTietDonDatHang" />
+    <NavigationProperty Name="KhachHang" Relationship="QL_BanHangModel.fk_ddh_kh" FromRole="DonDatHang" ToRole="KhachHang" />
+  </EntityType>
+  <Association Name="fk_ctddh_ddh">
+    <End Type="QL_BanHangModel.DonDatHang" Role="DonDatHang" Multiplicity="1" />
+    <End Type="QL_BanHangModel.ChiTietDonDatHang" Role="ChiTietDonDatHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonDatHang">
+        <PropertyRef Name="MaDonHang" />
+      </Principal>
+      <Dependent Role="ChiTietDonDatHang">
+        <PropertyRef Name="MaDonHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ctddh_sp">
+    <End Type="QL_BanHangModel.SanPham" Role="SanPham" Multiplicity="1" />
+    <End Type="QL_BanHangModel.ChiTietDonDatHang" Role="ChiTietDonDatHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
+      </Principal>
+      <Dependent Role="ChiTietDonDatHang">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ddh_kh">
+    <End Type="QL_BanHangModel.KhachHang" Role="KhachHang" Multiplicity="0..1" />
+    <End Type="QL_BanHangModel.DonDatHang" Role="DonDatHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="MaKhachHang" />
+      </Principal>
+      <Dependent Role="DonDatHang">
+        <PropertyRef Name="MaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

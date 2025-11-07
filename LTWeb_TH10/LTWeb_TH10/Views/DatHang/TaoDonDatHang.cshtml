@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "TaoDonDatHang";
+    var kh = ViewBag.KhachHang as LTWeb_TH10.Models.KhachHang;
+    var gh = ViewBag.GioHang as LTWeb_TH10.Models.GioHang;
+}
+
+<div style="text-align: center; ">
+    <h2>Thông tin đặt hàng</h2>
+    <form action="/DatHang/TaoDonDatHang" method="post">
+        <table style="margin: 0 auto; text-align: left;">
+            <tr>
+                <td>Họ tên: </td>
+                <td><strong>@kh.TenKH</strong></td>
+                <td style="width: 50px;"></td>
+                <td>Điện thoại: </td>
+                <td><strong>@kh.SoDienThoai</strong></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ: </td>
+                <td><strong>@kh.DiaChi</strong></td>
+            </tr>
+            <tr>
+                <td>Ngày đặt: </td>
+                <td><strong>@DateTime.Now.ToString("dd/MM/yyyy")</strong></td>
+                <td></td>
+                <td>Ngày giao: </td>
+                <td><input type="date" name="NgayGiao" required style="padding: 5px;" /></td>
+            </tr>
+        </table>
+
+        <br />
+        <h3>Thông tin đơn hàng</h3>
+        <table class="table" style="width: 80%; margin: 0 auto;">
+            <thead>
+                <tr>
+                    <th>Mã sách</th>
+                    <th>Tên sách</th>
+                    <th>Số lượng</th>
+                    <th>Đơn giá</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (gh != null && gh.lst != null)
+                {
+                    foreach (var item in gh.lst)
+                    {
+                        <tr>
+                            <td>@item.MaSanPham</td>
+                            <td>@item.TenSP</td>
+                            <td>@item.SoLuong</td>
+                            <td>@String.Format("{0:0,0}", item.DonGia)</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+        <br />
+        <table style="margin: 0 auto;">
+            <tr>
+                <td><strong>Tổng SL: @gh.TongSLHang()</strong></td>
+                <td style="width: 100px;"></td>
+                <td><strong>Tổng tiền: @String.Format("{0:0,0}", gh.TongThanhTien())</strong></td>
+            </tr>
+        </table>
+
+        <br />
+        <input type="submit" value="Đồng ý đặt hàng" class="btn btn-primary" style="padding: 10px 30px; font-size: 16px;" />
+    </form>
+</div>
+

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <script src="~/Content/js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Fahasa.com</div>
+                <nav>
+                    <ul>
+                        <li>@Html.ActionLink("Trang Chủ", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Liên Hệ", "Index", "Home")</li>
+                        <li>
+                            @{
+                                int soLuong = 0;
+                                if (Session["gh"] != null)
+                                {
+                                    LTWeb_TH10.Models.GioHang gh = (LTWeb_TH10.Models.GioHang)Session["gh"];
+                                    soLuong = gh.TongSLHang();
+                                }
+                            }
+                            @Html.ActionLink("Giỏ Hàng (" + soLuong + ")", "XemGioHang", "DatHang")
+                        </li>
+                        @if (Session["KhachHang"] == null)
+                        {
+                            <li>@Html.ActionLink("Đăng Nhập", "DangNhap", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        }
+                        else
+                        {
+                            <li style="color:white">Xin chào, @Session["TenKH"]!</li>
+                            <li>@Html.ActionLink("Đăng Xuất", "DangXuat", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <br />
+    <div class="container-fluid">
+        <div class="row">
+            <div>
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <br />
+    <footer>
+        <div style="text-align: center; ">
+            <h5>Liện hệ Khoa Công nghệ Thông tin - Trường Đại học Công Thương Tp.HCM link fanpage and link youtube</h5>
+            <h5>Địa chỉ: 140 Lê Trọng Tấn, Phường Tây Hạnh, Quận Tân Phú, Tp.HCM - ĐT: (028)38161673 ext(136) - Mail: kcntt@huit.edu.vn</h5>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

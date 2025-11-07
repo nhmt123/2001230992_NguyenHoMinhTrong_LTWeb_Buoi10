@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "XemGioHang";
+}
+@model LTWeb_TH10.Models.GioHang
+
+<div style="padding: 20px;">
+    <h2>Thông tin giỏ hàng đã chọn</h2>
+
+    @if (Model == null || Model.lst == null || Model.lst.Count == 0)
+    {
+        <div style="text-align: center; padding: 50px;">
+            <h3>Bạn chưa chọn sản phẩm nào cả!</h3>
+            <br />
+            <a href="@Url.Action("Index", "Home")" class="btn btn-primary">Tiếp tục mua hàng</a>
+        </div>
+    }
+    else
+    {
+        <a href="@Url.Action("TaoDonDatHang", "DatHang")" class="btn btn-primary" style="margin-bottom: 15px;">
+            Xác Nhận Đặt Hàng
+        </a>
+        @*<a href="@Url.Action("XoaDSGioHang", "DatHang")" class="btn btn-primary" style="margin-bottom: 15px;">
+            Xóa Tất Cả
+        </a>*@
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Mã Sách</th>
+                    <th>Tên Sách</th>
+                    <th>Ảnh</th>
+                    <th>Số Lượng</th>
+                    <th>Đơn Giá</th>
+                    <th>Thành Tiền</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var sp in Model.lst)
+                {
+                    <tr>
+                        <td>@sp.MaSanPham</td>
+                        <td>@sp.TenSP</td>
+                        <td><img src="~/Content/Images/@sp.AnhBia" style="width:50px; height:60px;" /></td>
+                        <td>@sp.SoLuong</td>
+                        <td>@String.Format("{0:0,0}", sp.DonGia)</td>
+                        <td>@String.Format("{0:0,0}", sp.ThanhTien)</td>
+                        <td><a href="#">Chi Tiết Sách</a></td>
+                        <td><a href="#">Xóa</a></td>
+                        <td><a href="#">Sửa</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div style="text-align: right; font-size: 18px; margin-top: 20px;">
+            <strong>Tổng số lượng: @Model.TongSLHang()</strong><br />
+            <strong>Tổng tiền: @String.Format("{0:0,0}", Model.TongThanhTien()) VNĐ</strong>
+        </div>
+    }
+</div>
