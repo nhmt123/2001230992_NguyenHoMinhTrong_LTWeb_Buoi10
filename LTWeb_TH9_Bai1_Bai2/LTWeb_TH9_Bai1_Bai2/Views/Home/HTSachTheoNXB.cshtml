@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "HTSachTheoNXB";
+}
+
+@model List<LTWeb_TH9_Bai1_Bai2.Models.Sach>
+
+<h1 style="text-align:center">SÁCH THEO CHỦ ĐỀ</h1>
+@if (Model != null && Model.Any())
+{
+    <div class="container">
+        <div class="card-container">
+            @foreach (var s in Model)
+            {
+                <div class="card">
+                    <div>
+                        <img style="width:310px; height: 350px;" src="~/Content/Images/@s.AnhBia" />
+                    </div>
+                    <div class="card-content">
+                        <h5 style="font-size:28px; text-align: center;">@s.TenSach</h5>
+                        <center>
+                            @Html.ActionLink("Chi Tiết", "XemChiTiet", "Home", new { id = s.MaSach }, new { @class = "btn btn-warning" })
+                            @Html.ActionLink("Chọn", "XemChiTiet", "Home", new { id = s.MaSach }, new { @class = "btn btn-warning" })
+                        </center>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+else
+{
+    <center>Không có sách nào thuộc nhà xuất bản này !</center>
+}
+
