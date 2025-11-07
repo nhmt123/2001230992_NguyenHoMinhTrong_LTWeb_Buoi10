@@ -44,6 +44,35 @@ create table ChiTiet
 	constraint fk_ct_sp foreign key (MaSP) references SanPham (MaSanPham),
 )
 
+use QL_BanHang
+go
+
+-- Bảng Đơn Đặt Hàng
+create table DonDatHang
+(
+    MaDonHang int identity(1,1) not null,
+    MaKH int,
+    NgayDat date,
+    NgayGiao date,
+    TongTien money,
+    TrangThai nvarchar(50),
+    constraint pk_ddh primary key (MaDonHang),
+    constraint fk_ddh_kh foreign key (MaKH) references KhachHang (MaKhachHang)
+)
+
+-- Bảng Chi Tiết Đơn Đặt Hàng
+create table ChiTietDonDatHang
+(
+    MaDonHang int not null,
+    MaSP int not null,
+    SoLuong int,
+    DonGia money,
+    ThanhTien money,
+    constraint pk_ctddh primary key (MaDonHang, MaSP),
+    constraint fk_ctddh_ddh foreign key (MaDonHang) references DonDatHang (MaDonHang),
+    constraint fk_ctddh_sp foreign key (MaSP) references SanPham (MaSanPham)
+)
+
 insert into SanPham values
 (1, N'Dế Mèn Phiêu Lưu Ký', 120000, N'hinh1.jpg', N'Truyện thiếu nhi kinh điển', 100),
 (2, N'Lão Hạc', 85000, N'hinh2.jpg', N'Truyện ngắn của Nam Cao', 50),
@@ -71,7 +100,6 @@ insert into ChiTiet values
 (2, 2, 1),
 (3, 5, 1),
 (4, 4, 3)
-
 
 drop table ChiTiet
 drop table HoaDon
